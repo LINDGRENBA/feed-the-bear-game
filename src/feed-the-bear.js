@@ -64,4 +64,5 @@ export class HungryBear {
         this.setMood();
       }, 20000)
   } 
+  //commit changes
 }
