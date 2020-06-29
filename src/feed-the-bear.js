@@ -42,5 +42,8 @@ export class HungryBear {
   }
 
   scratchBack() {
+    if (this.moodLevel < 10) {
+      return this.moodLevel = 0;
+    }
   }
 }
