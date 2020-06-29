@@ -2,7 +2,6 @@ export class HungryBear {
 
   constructor(name) {
     this.name = name;
-    this.foodLevel = name;
     this.foodLevel = 10;
     this.moodLevel = 0;
     this.scratches = 0;
@@ -51,7 +50,25 @@ export class HungryBear {
     }
   }
 
-  hibernate() {
+  // hibernate() {
+  //   setTimeout(() => {
+  //     this.foodLevel = 10;
+  //     this.moodLevel = 0;
+  //   }, 20000);
+  // }
 
+  executeHibernate(){
+    if (this.feedings === 0 && this.scratches === 0){
+      this.hibernate();
+    }
+  }
+
+  hibernate() {
+      this.foodLevel = 10;
+      this.moodLevel = 0;
+      setTimeout(() => {
+        setHunger();
+        setMood();
+      }, 20000)
   }
 }

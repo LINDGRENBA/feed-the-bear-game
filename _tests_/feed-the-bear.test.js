@@ -73,10 +73,12 @@ describe('Fuzzy', () => {
     expect(fuzzy.feedings).toEqual(1);
   });
 
-  test('Create a sleep state for our bear object where it no longer needs to be fed or scratched for a period of time before he wakes up', () => {
-    jest.advanceTimersByTime(3000);
-    fuzzy.hibernate();
-    expect(fuzzy.moodLevel).toEqual(0);
-    expect(fuzzy.foodLevel).toEqual(10);
+  test('Create a sleep state for our bear object where it no longer needs to be fed or scratched for a period of time before he wakes up', done => {
+    jest.advanceTimersByTime(9001);
+    fuzzy.hibernate(() => {
+      expect(fuzzy.moodLevel).toEqual(0);
+      expect(fuzzy.foodLevel).toEqual(10);
+      done();
+    });
   });
 });
