@@ -7,6 +7,7 @@ describe('Fuzzy', () => {
   beforeEach(function() {
     fuzzy = new HungryBear("Fuzzy");
     fuzzy.setHunger();
+    fuzzy.setMood();
   });
 
   afterEach(function() {
@@ -51,6 +52,6 @@ describe('Fuzzy', () => {
 
   test('should have mood level of 3 after 3001 milliseconds', () => {
     jest.advanceTimersByTime(3001);
-    expect(fuzzy.moodLevel).toEqual(2);
+    expect(fuzzy.moodLevel).toEqual(3);
   });
 });

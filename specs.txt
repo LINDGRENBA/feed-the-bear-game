@@ -19,5 +19,5 @@ Create a hibernation count so that if the user is still hanging on after a prede
   test('mood level should be increasing by one everysecond')
 
   Co-authored-by: Brittany Lindgren <brittdevelopsit@gmail.com>
-  dquote>Co-authored-by: Sara Kane <kane.sarak@gmail.com>"
+dquote>  Co-authored-by: Sara Kane <kane.sarak@gmail.com>"
 

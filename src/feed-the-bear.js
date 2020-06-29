@@ -16,7 +16,7 @@ export class HungryBear {
   setMood() {
     setInterval(() => {
       this.moodLevel++;
-    }, 1000)
+    }, 1000);
   }
 
   didYouGetEaten() {
