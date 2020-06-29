@@ -40,4 +40,7 @@ export class HungryBear {
       return true;
     }
   }
+
+  scratchBack() {
+  }
 }

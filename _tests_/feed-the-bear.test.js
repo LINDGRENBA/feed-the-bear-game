@@ -59,4 +59,10 @@ describe('Fuzzy', () => {
     fuzzy.moodLevel = 10;
     expect(fuzzy.isBearAttacking()).toEqual(true);
   });
+
+  test("should have a mood level of zero if bear's back is scratched", () => {
+    jest.advanceTimersByTime(9999);
+    fuzzy.scratchBack();
+    expect(fuzzy.moodLevel).toEqual(0);
+  });
 });
