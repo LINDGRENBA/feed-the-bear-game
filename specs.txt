@@ -1,0 +1,22 @@
+Feed the Bear specifications:
+
+Add a mood atribute to our bear object
+
+Add set interval that increases the bears mood over time until it reaches 10
+
+When bear's mood level reaches ten it attacks
+
+Create a backScratch function that will temporarily decrease the bears mood
+
+Create a sleep state for our bear object where it no longer needs to be fed or scratched for a period of time before he wakes up. This "hibernation" state will execute after a certain number of feeds and scratches
+
+After each time the bear hibernatine the bear gets hungrier faster
+
+After each time the bear hibernatine the bear gets angrier faster
+
+Create a hibernation count so that if the user is still hanging on after a predetermined amount of levels, they win!
+
+  test('mood level should be increasing by one everysecond')
+
+  Co-authored-by: Brittany Lindgren <brittdevelopsit@gmail.com>
+  Co-authored-by: Sara Kane <kane.sarak@gmail.com>
