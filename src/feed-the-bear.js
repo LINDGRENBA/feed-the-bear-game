@@ -6,16 +6,18 @@ export class HungryBear {
     this.moodLevel = 0;
     this.scratches = 0;
     this.feedings = 0;
+    this.hungerInterval;
+    this.moodInterval;
   }
 
   setHunger() {
-    setInterval(() => {
+    this.hungerInterval = setInterval(() => {
       this.foodLevel--;
     }, 1000);
   }
 
   setMood() {
-    setInterval(() => {
+    this.moodInterval = setInterval(() => {
       this.moodLevel++;
     }, 1000);
   }
@@ -47,28 +49,19 @@ export class HungryBear {
     if (this.moodLevel < 10) {
       this.scratches ++;
       this.moodLevel = 0;
-    }
-  }
-
-  // hibernate() {
-  //   setTimeout(() => {
-  //     this.foodLevel = 10;
-  //     this.moodLevel = 0;
-  //   }, 20000);
-  // }
-
-  executeHibernate(){
-    if (this.feedings === 0 && this.scratches === 0){
+    } if (this.scratches === 10 && this.feedings === 10){
       this.hibernate();
     }
   }
 
   hibernate() {
+    clearInterval(this.hungerInterval);
+    clearInterval(this.moodInterval);
       this.foodLevel = 10;
       this.moodLevel = 0;
       setTimeout(() => {
-        setHunger();
-        setMood();
+        this.setHunger();
+        this.setMood();
       }, 20000)
-  }
+  } 
 }

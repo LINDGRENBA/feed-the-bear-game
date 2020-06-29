@@ -73,12 +73,19 @@ describe('Fuzzy', () => {
     expect(fuzzy.feedings).toEqual(1);
   });
 
-  test('Create a sleep state for our bear object where it no longer needs to be fed or scratched for a period of time before he wakes up', done => {
-    jest.advanceTimersByTime(9001);
-    fuzzy.hibernate(() => {
-      expect(fuzzy.moodLevel).toEqual(0);
-      expect(fuzzy.foodLevel).toEqual(10);
-      done();
+  test('moodLevel should reset to 0 after hibernate function is executed', () => {
+    jest.setTimeout(30000);
+    fuzzy.moodLevel = 3;
+    fuzzy.hibernate();
+    expect(fuzzy.moodLevel).toEqual(0);
     });
-  });
+
+  test('moodLevel should resume incrementing', () => {
+    jest.setTimeout(51001);
+    fuzzy.moodLevel = 3;
+    fuzzy.hibernate();
+    expect(fuzzy.moodLevel).toEqual(0);
+    jest.advanceTimersByTime(21000);
+    console.log(fuzzy.moodLevel);
+    });
 });
