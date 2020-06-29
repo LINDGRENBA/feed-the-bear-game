@@ -46,6 +46,6 @@ describe('Fuzzy', () => {
   });
 
   test('object should now have a mood level which defaults at 0', () => {
-    expect(fuzzy.moodLevel).toEqual(3);
+    expect(fuzzy.moodLevel).toEqual(0);
   });
 });
