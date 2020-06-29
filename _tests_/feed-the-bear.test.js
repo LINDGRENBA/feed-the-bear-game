@@ -48,4 +48,9 @@ describe('Fuzzy', () => {
   test('object should now have a mood level which defaults at 0', () => {
     expect(fuzzy.moodLevel).toEqual(0);
   });
+
+  test('should have mood level of 3 after 3001 milliseconds', () => {
+    jest.advanceTimersByTime(3001);
+    expect(fuzzy.moodLevel).toEqual(2);
+  });
 });
