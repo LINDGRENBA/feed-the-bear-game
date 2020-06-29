@@ -5,6 +5,8 @@ export class HungryBear {
     this.foodLevel = name;
     this.foodLevel = 10;
     this.moodLevel = 0;
+    this.scratches = 0;
+    this.feedings = 0;
   }
 
   setHunger() {
@@ -29,6 +31,7 @@ export class HungryBear {
 
   feed() {
     if (this.foodLevel > 0){
+      this.feedings ++;
       return this.foodLevel = 10;
     }
   }
@@ -43,6 +46,7 @@ export class HungryBear {
 
   scratchBack() {
     if (this.moodLevel < 10) {
+      this.scratches ++;
       return this.moodLevel = 0;
     }
   }

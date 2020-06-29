@@ -65,4 +65,11 @@ describe('Fuzzy', () => {
     fuzzy.scratchBack();
     expect(fuzzy.moodLevel).toEqual(0);
   });
+
+  test('count for scratches and feedings should increase each time bear is scratched and fed', () => {
+    fuzzy.scratchBack();
+    fuzzy.feed();
+    expect(fuzzy.scratches).toEqual(1);
+    expect(fuzzy.feedings).toEqual(1);
+  });
 });
