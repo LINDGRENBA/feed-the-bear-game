@@ -54,4 +54,9 @@ describe('Fuzzy', () => {
     jest.advanceTimersByTime(3001);
     expect(fuzzy.moodLevel).toEqual(3);
   });
+
+  test('should get very angry if the mood level reaches 10', function() {
+    fuzzy.moodLevel = 10;
+    expect(fuzzy.isBearAttacking()).toEqual(true);
+  });
 });

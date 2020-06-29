@@ -32,4 +32,8 @@ export class HungryBear {
       return this.foodLevel = 10;
     }
   }
+
+  isBearAttacking() {
+
+  }
 }
