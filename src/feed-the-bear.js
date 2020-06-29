@@ -34,6 +34,10 @@ export class HungryBear {
   }
 
   isBearAttacking() {
-
+    if (this.moodLevel < 10) {
+      return false;
+    } else {
+      return true;
+    }
   }
 }
