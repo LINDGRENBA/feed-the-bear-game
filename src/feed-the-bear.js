@@ -32,7 +32,7 @@ export class HungryBear {
   feed() {
     if (this.foodLevel > 0){
       this.feedings ++;
-      return this.foodLevel = 10;
+      this.foodLevel = 10;
     }
   }
 
@@ -47,7 +47,11 @@ export class HungryBear {
   scratchBack() {
     if (this.moodLevel < 10) {
       this.scratches ++;
-      return this.moodLevel = 0;
+      this.moodLevel = 0;
     }
+  }
+
+  hibernate() {
+
   }
 }
